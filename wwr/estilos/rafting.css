@@ -30,9 +30,6 @@ header, main, footer {
     margin: 0 auto;
 }
 
-nav a {
-    display: block;
-}
 body {
     font-family: var(--fonte-body);
     color: var(--cor-destaque1);
