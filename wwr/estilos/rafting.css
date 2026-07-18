@@ -16,7 +16,7 @@
 header {
     background-color:  var(--cor-primaria);
     color: var(--cor-destaque2);
-    padding-left: 20px;
+    padding-left: 10px;
 }   
 
 header img {
@@ -30,6 +30,9 @@ header, main, footer {
     margin: 0 auto;
 }
 
+nav a {
+    display: block;
+}
 body {
     font-family: var(--fonte-body);
     color: var(--cor-destaque1);
@@ -45,6 +48,7 @@ nav, p, section, article {
     padding: 8px;
     color:#000;
 }
+
 
 .footer a {
     text-decoration: none;
