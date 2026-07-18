@@ -1,0 +1,90 @@
+:root {
+    --cor-primaria: #fff   ; /* branco */ 
+    --cor-secundaria: steelblue; /* bege médio */
+    --cor-destaque1: #aee5ff; /* azul-escuro acinzentado */
+    --cor-destaque2: #0d5cee; /* amarelo-claro dourado */
+    --fonte-titulo: "Times Nem Roman", "Georgia", serif;
+    --fonte-body: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color:  var(--cor-primaria);
+    color: var(--cor-destaque2);
+    padding-left: 20px;
+}   
+
+header img {
+    width: 150px;
+    height: auto;
+    margin-top: 20px;
+}
+
+header, main, footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: var(--fonte-body);
+    color: var(--cor-destaque1);
+}
+
+h1, h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-secundaria);
+    text-align: center;
+}
+
+nav, p, section, article {
+    padding: 8px;
+    color:#000;
+}
+
+.redes-sociais a {
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    opacity: 0.6;
+    background-color: var(--cor-primaria);
+    color: #000; 
+}
+
+article {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    background-color: var(--cor-primaria);
+    opacity: 0.7; 
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-right: 5px;
+    border: #000;
+    box-shadow: #aee5ff;
+}
