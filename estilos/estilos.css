@@ -36,9 +36,11 @@ nav a {
 
 h1 {
     color: steelblue;
-    border-bottom: 3px solid steelblue;
+    border-bottom: 3px solid #d8d5d5;
+    margin-bottom: 2px;
+    line-height: 45px;
 }
-
+ 
 main {
   grid-column: 2/3;
   margin: 1rem;
@@ -46,20 +48,29 @@ main {
 
 main img {
     margin-left: 20px;
-    margin-top: 15px;
-    /* margin-bottom: 10px;*/
+    margin-top: 25px;
     width: 150px;
     height: auto;
     border: 1px solid black;
     padding: 2px;
-    box-shadow: 0 0 30px gray;
+    box-shadow: 0 0 30px rgb(219, 216, 216);
     float: right;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+}
+
+main ul {
+    margin-top: 15px;
 }
 
 p {
     padding: 5px;
-    margin-top: 10px;
-    justify-content: center;
+    margin-top: 20px;
+    justify-content:space-between;
+}
+
+li {
+    margin-left: 1rem;
 }
 
 aside {
@@ -71,21 +82,25 @@ aside {
 }
 
 aside img {
-    padding-top: 50px;
-    width: 250px;
+    width: 280px;
     height: auto;
+    margin-top: 5px;
+    margin-left: 3px;
+    box-shadow: 0 0 30px rgb(184, 183, 183);
+    border: 5px solid #ffffff;
+    border-radius: 5px;
 }
 
 aside h2 {
     position: absolute;
-    top: 130px;
+    top: 90px;
     left: 100px;
     background-color: #fff;
     color: steelblue;
 }
 
 footer {
-    margin-top: 15px;
+    margin-top: 20px;
     border-top: 1px solid #000;
     text-align: center;
 }
@@ -93,21 +108,23 @@ footer {
 /* Seletores de Classe */
 
 .caixa {
-  /*margin: 1rem;*/
   border: 1px solid rgb(0, 0, 0, 0.2);
   padding: 1rem;
   background-color: #eee;
+  width: 100%;
+  box-sizing: border-box;
+  
 }
 
 .indentacao {
-    padding-left: 2rem;
+    margin-left: 1rem;
 }
 
 .grid {
   display: grid;
-  align-items: start;
+  align-items:start;
   grid-template-columns: 20rem 1fr;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
  
