@@ -76,11 +76,6 @@ footer {
   align-items: center;
 }
 
-footer nav {
-  display: flex;
-  gap: 10px;
-}
-
 footer p {
   font-size: 15px;
   font-weight: bold;
