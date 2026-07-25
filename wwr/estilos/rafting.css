@@ -85,7 +85,14 @@ footer p {
   margin-left: 70px;
 }
 
+/*
 footer nav {
+  display: flex;
+  gap: 10px;
+}
+*/
+
+.socialmedia {
   display: flex;
   gap: 10px;
 }
@@ -126,7 +133,7 @@ footer img {
     background-color: var(--cor-primaria);
     color: #000; 
     opacity: 0.7;
-    font-family: var|(var(--fonte-titulo));
+    font-family: var(--fonte-titulo);
 } 
 
 .hero article {
