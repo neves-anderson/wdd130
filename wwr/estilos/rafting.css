@@ -53,7 +53,7 @@ nav ul {
     max-width: 840px;
     margin: 0 auto;
     padding: 10px 40px;
-    color: #000; 
+    
 }
 
 nav a {
@@ -62,6 +62,7 @@ nav a {
     padding: .2rem;
     text-decoration: none;
     font-weight: 700;
+    color: #000; 
 }
 
 footer {
