@@ -2,8 +2,7 @@
     --cor-primaria: #fff; 
     --cor-secundaria: rgb(81, 120, 152); 
     --cor-destaque1: #333; 
-    --cor-destaque2: #a0a0a0; 
-    --cor-destaque3:rgb(177, 205, 228) ;
+    --cor-destaque2: rgb(177, 205, 228) ;
     --fonte-titulo: "Times Nem Roman", "Georgia", serif;
     --fonte-body: Arial, Helvetica, sans-serif;
 }
@@ -148,7 +147,7 @@ footer img {
 
 .historia {
   margin-top: 20px;
-  background-color: var(--cor-destaque3);
+  background-color: var(--cor-destaque2);
   border: 1px solid var(--cor-secundaria);
   text-align: center;
   padding-bottom: 20px;
@@ -217,7 +216,7 @@ footer img {
     font-weight: bold;
 }
 
-.socialmedia {
+.redes-sociais {
   display: flex;
   gap: 10px;
 }
