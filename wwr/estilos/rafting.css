@@ -1,13 +1,12 @@
 :root {
     --cor-primaria: #fff; 
-    --cor-secundaria: #666; 
+    --cor-secundaria: rgb(81, 120, 152); 
     --cor-destaque1: #333; 
     --cor-destaque2: #a0a0a0; 
-    --cor-destaque3: #c8c8c8;
+    --cor-destaque3:rgb(177, 205, 228) ;
     --fonte-titulo: "Times Nem Roman", "Georgia", serif;
     --fonte-body: Arial, Helvetica, sans-serif;
 }
-
 
 * {
   box-sizing: border-box;
@@ -31,7 +30,7 @@ header, main, footer {
 }
 
 header {
-  background-color: var(--cor-destaque2);
+  background-color: var(--cor-secundaria);
   border: 1px solid var(--cor-secundaria);
   padding: 20px 40px;
   display: flex;
@@ -42,19 +41,19 @@ header {
 header img {
   width: 120px;
   height: auto;
+  border-radius: 10px;
 }
 
 header nav {
   display: flex;
-  border: 1px solid var(--cor-secundaria);
-  background-color: var(--cor-primaria); 
+  color: var(--cor-primaria)
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
     gap: 1.5rem;
-    color: var(--cor-destaque1);
+    color: var(--cor-primaria);
     flex-wrap: wrap;
     max-width: 840px;
     margin: 0 auto;
@@ -63,7 +62,7 @@ nav ul {
 
 nav a {
     display: block;
-    color: #2a303d;
+    color: var(--cor-primaria);
     text-align: center;
     padding: .2rem;
     text-decoration: none;
@@ -71,7 +70,7 @@ nav a {
 }
 
 footer {
-  background-color: var(--cor-destaque2);
+  background-color: var(--cor-secundaria);
   border: 1px solid var(--cor-secundaria);
   padding: 10px 30px;
   display: flex;
@@ -83,11 +82,7 @@ footer p {
   font-size: 15px;
   font-weight: bold;
   margin-left: 70px;
-}
-
-.socialmedia {
-  display: flex;
-  gap: 10px;
+  color: var(--cor-primaria);
 }
 
 footer img {
@@ -148,6 +143,7 @@ footer img {
     width: 125px;
     margin-right: 5px;
     border: #000;
+    border-radius: 10px;
 }
 
 .historia {
@@ -183,6 +179,7 @@ footer img {
   height: 130px;
   background-color: #000;
   color: var(--cor-primaria);
+  border-radius: 10px;
 }
 
 .portfolio {
@@ -211,10 +208,16 @@ footer img {
   justify-content: space-between;
   align-items: center;
   margin-left: 10px;
+  border-radius: 10px;
 }
 
 .portfolio-figuras figcaption {
     font-size: 14px;
     text-align: center;
     font-weight: bold;
+}
+
+.socialmedia {
+  display: flex;
+  gap: 10px;
 }
