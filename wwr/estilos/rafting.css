@@ -1,6 +1,6 @@
 :root {
     --cor-primaria: #fff; 
-    --cor-secundaria: rgb(81, 120, 152); 
+    --cor-secundaria: rgb(115, 156, 190); 
     --cor-destaque1: #333; 
     --cor-destaque2: rgb(177, 205, 228) ;
     --fonte-titulo: "Times Nem Roman", "Georgia", serif;
@@ -83,7 +83,7 @@ footer p {
 }
 
 footer nav {
-   display: flex;
+  display: flex;
   gap: 10px;
 }
 
@@ -219,7 +219,3 @@ footer img {
     font-weight: bold;
 }
 
-.socialmedia {
-  display: flex;
-  gap: 10px;
-}
