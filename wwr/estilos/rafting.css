@@ -1,7 +1,7 @@
 :root {
     --cor-primaria: #fff; 
     --cor-secundaria: rgb(115, 156, 190); 
-    --cor-destaque1: #333; 
+    --cor-destaque1: #000; 
     --cor-destaque2: rgb(177, 205, 228) ;
     --fonte-titulo: "Times Nem Roman", "Georgia", serif;
     --fonte-body: Arial, Helvetica, sans-serif;
@@ -50,7 +50,7 @@ nav ul {
     list-style-type: none;
     display: flex;
     gap: 1.5rem;
-    color: var|(var(--cor-primaria));
+    color: var(--cor-primaria);
     flex-wrap: wrap;
     max-width: 840px;
     margin: 0 auto;
@@ -59,7 +59,6 @@ nav ul {
 
 nav a {
     display: block;
-    color: #000;
     text-align: center;
     padding: .2rem;
     text-decoration: none;
