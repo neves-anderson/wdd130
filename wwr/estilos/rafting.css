@@ -126,6 +126,7 @@ footer img {
     background-color: var(--cor-primaria);
     color: #000; 
     opacity: 0.7;
+    font-family: var|(var(--fonte-titulo));
 } 
 
 .hero article {
@@ -139,6 +140,7 @@ footer img {
     background-color: var(--cor-primaria);
     opacity: 0.7;
     color: #000; 
+    font-family: var(--fonte-body);
 }
 
 .hero article img {
@@ -166,7 +168,6 @@ footer img {
   grid-template-columns: 2fr 1fr 2fr;
   gap:5px;
   align-items: center;
-  
 }
 
 .historia-paragrafo p {
@@ -174,6 +175,7 @@ footer img {
   font-size: 13px;
   line-height: 1.4;
   padding:15px;
+  font-family: var(--fonte-body);
 
 }
 
