@@ -50,7 +50,7 @@ nav ul {
     list-style-type: none;
     display: flex;
     gap: 1.5rem;
-    color: #000;
+    color: var|(var(--cor-primaria));
     flex-wrap: wrap;
     max-width: 840px;
     margin: 0 auto;
@@ -79,7 +79,7 @@ footer p {
   font-size: 15px;
   font-weight: bold;
   margin-left: 70px;
-  color: #000;
+  color: var(--cor-primaria);
 }
 
 footer nav {
