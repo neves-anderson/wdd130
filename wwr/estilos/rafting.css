@@ -44,14 +44,13 @@ header img {
 
 header nav {
   display: flex;
-  color: #000;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
     gap: 1.5rem;
-    color: var(--cor-primaria);
+    color: #000;
     flex-wrap: wrap;
     max-width: 840px;
     margin: 0 auto;
