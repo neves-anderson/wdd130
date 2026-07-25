@@ -16,7 +16,6 @@
 
 body {
   background-color: var(--cor-primaria);
-  color: var(--cor-destaque1);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -50,11 +49,11 @@ nav ul {
     list-style-type: none;
     display: flex;
     gap: 1.5rem;
-    color: var(--cor-primaria);
     flex-wrap: wrap;
     max-width: 840px;
     margin: 0 auto;
     padding: 10px 40px;
+    color: #000; 
 }
 
 nav a {
@@ -78,7 +77,7 @@ footer p {
   font-size: 15px;
   font-weight: bold;
   margin-left: 70px;
-  color: var(--cor-primaria);
+  color: #000; 
 }
 
 footer nav {
@@ -105,6 +104,7 @@ footer img {
   margin: 0 auto;
   overflow: hidden;
   box-sizing: border-box;
+  border: 1px solid var(--cor-secundaria);
 }
 
 .hero img {
