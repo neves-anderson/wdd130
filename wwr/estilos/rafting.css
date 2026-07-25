@@ -44,7 +44,7 @@ header img {
 
 header nav {
   display: flex;
-  color: var(--cor-primaria)
+  color: #000;
 }
 
 nav ul {
@@ -60,7 +60,7 @@ nav ul {
 
 nav a {
     display: block;
-    color: var(--cor-primaria);
+    color: #000;
     text-align: center;
     padding: .2rem;
     text-decoration: none;
@@ -85,7 +85,7 @@ footer p {
   font-size: 15px;
   font-weight: bold;
   margin-left: 70px;
-  color: var(--cor-primaria);
+  color: #000;
 }
 
 footer img {
