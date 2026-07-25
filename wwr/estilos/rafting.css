@@ -30,7 +30,6 @@ header, main, footer {
 
 header {
   background-color: var(--cor-secundaria);
-  border: 1px solid var(--cor-secundaria);
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
@@ -75,6 +74,11 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+footer nav {
+  display: flex;
+  gap: 10px;
 }
 
 footer p {
