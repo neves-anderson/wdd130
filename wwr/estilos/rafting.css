@@ -28,11 +28,11 @@ header, main, footer {
 }
 
 header {
+  display: grid;
+  grid-template-columns: 200px 2fr;
   background-color: var(--cor-secundaria);
   padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: center; 
 }
 
 header img {
@@ -70,14 +70,14 @@ footer {
   border: 1px solid var(--cor-secundaria);
   padding: 10px 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
 }
 
 footer p {
   font-size: 15px;
   font-weight: bold;
-  margin-left: 70px;
+  margin-right: 50px;
   color: var(--cor-destaque1); 
 }
 
