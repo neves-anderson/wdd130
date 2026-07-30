@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 15px;
+}
+
+header h1 {
+  color: #1a202c;
+  font-size: 1.8rem;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333333;
+    line-height: 1.6;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container do Formulário */
+form {
+    background-color: #ffffff;
+    max-width: 600px;
+    width: 100%;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+/* Grupos de Perguntas */
+form > div {
+    margin-bottom: 20px;
+}
+
+/* Rótulos (Labels) */
+label {
+    display: block;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* Estilização dos Campos de Entrada (Input, Textarea, Select) */
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #2d3748;
+    background-color: #f8fafc;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: inherit;
+}
+
+/* Destaque ao Focar no Campo */
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+    background-color: #ffffff;
+}
+
+/* Ajustes Específicos para Textarea */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Botão de Envio */
+button[type="submit"] {
+    width: 100%;
+    background-color: #3182ce;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #2b6cb0;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.99);
+}
+
+.quiz-container {
+  background-color: #ffffff;
+  max-width: 650px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}

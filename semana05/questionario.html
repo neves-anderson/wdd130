@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário de HTML e CSS</title>
+    <link rel="stylesheet" href="estilos/teste.css"
+</head>
+<body>
+
+   <main class="quiz-container">
+       <h1>Questionário sobre HTML e CSS</h1>
+    </header>
+    
+
+    <form action="#" method="post">
+
+        <!-- Pergunta 1: Entrada do tipo text (Preencher a lacuna) -->
+        <div>
+            <label for="q1">1. Qual elemento HTML é utilizado para criar um link de hipertexto?</label><br>
+            <input type="text" id="q1" name="q1" required>
+        </div>
+
+        <br>
+
+        <!-- Pergunta 2: Elemento textarea (Resposta curta) -->
+        <div>
+            <label for="q2">2. Explique brevemente a diferença entre as propriedades 'margin' e 'padding' no CSS:</label><br>
+            <textarea id="q2" name="q2" rows="4" cols="50" required></textarea>
+        </div>
+
+        <br>
+
+        <!-- Pergunta 3: Elemento select (Caixa suspensa / Combobox) -->
+        <div>
+            <label for="q3">3. Qual propriedade CSS é usada para alterar a cor do texto de um elemento?</label><br>
+            <select id="q3" name="q3" required>
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="color">color</option>
+                <option value="background-color">background-color</option>
+                <option value="text-color">text-color</option>
+                <option value="font-color">font-color</option>
+            </select>
+        </div>
+
+        <br>
+
+        <!-- Pergunta 4: Entrada do tipo number (Resposta de número inteiro) -->
+        <div>
+            <label for="q4">4. Quantos níveis de títulos de cabeçalho padrão existem no HTML (de h1 até qual número)?</label>
+            <input type="number" id="q4" name="q4" min="1" max="10" step="1" required>
+        </div>
+
+
+        <!-- Pergunta 5: Pergunta adicional para completar o mínimo de 4 -->
+        <div>
+            <label for="q5">5. O CSS é utilizado para estruturar o conteúdo de uma página web, enquanto o HTML cuida do estilo visual.</label><br>
+            <select id="q5" name="q5" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="verdadeiro">Verdadeiro</option>
+                <option value="falso">Falso</option>
+            </select>
+        </div>
+
+        <br>
+
+        <button type="submit">Enviar Questionário</button>
+
+    </form>
+ </main>
+
+</body>
+</html>
