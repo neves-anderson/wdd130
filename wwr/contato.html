@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco</title>
+    <meta name="description" content="Esta é uma página para quem busca agendar a melhor excursão de rafting">
+    <meta name="author" content="Anderson de Souza das Neves">
+    <link rel="stylesheet" href="estilos/rafting.css">
+</head>
+<body>
+    <header>
+        <img src="imagens/logo.png" alt="logotipo da empresa">
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="passeios.html">Passeios</a></li>
+                <li><a href="contato.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main> 
+        <div class="contato">
+           <h2>Amazonia Rafting</h2>
+           <p>123 Rua Principal do Rio Foz do Iguaçu, Paraná +55 45 99999-9999 info@correiras.com</p>
+        </div>
+        <section class="section-container">
+            
+            <div class="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d63745.1587594474!2d-59.99012466952179!3d-3.0753330519563136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1785462909290!5m2!1spt-BR!2sbr" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>  
+            </div>
+            <div class="box-form">
+            <form class="formulario">
+
+            <!-- Nome -->
+                <div class="form-group">
+                   <label for="nome">Nome:</label>
+                   <input type="text" id="nome" name="nome" placeholder="Digite aqui">
+                </div>
+
+                <!-- E-mail -->
+                <div class="form-group">
+                   <label for="email">E-mail:</label>
+                   <input type="email" id="email" name="email" placeholder="Digite aqui">
+                </div>
+
+                <!-- Propósito da Mensagem -->
+                <div class="radio-section">
+                    <div class="section-label">Propósito da<br>Mensagem</div>
+                    <div class="radio-options">
+                        <label class="radio-option">
+                           <input type="radio" name="proposito" value="duvida_geral">
+                           Dúvida Geral
+                        </label>
+                        <label class="radio-option">
+                           <input type="radio" name="proposito" value="pergunta_reserva">
+                           Pergunta sobre Reserva
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="proposito" value="sugestao">
+                            Sugestão
+                        </label>
+                    </div>
+                </div>
+   
+                <!-- Mensagem -->
+                <div class="textarea-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Digite aqui"></textarea>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Por favor, me inscreva na newsletter mensal</label>
+                </div>
+
+                <!-- Botão Enviar -->
+                <button type="submit" class="submit-btn">Entrar em Contato!</button>
+            </form>
+            </div>
+        </section>
+        <section class="portfolio1">
+            <h2>Estamos Aqui para Serví-lo</h2>
+            <div class="portfolio1-figuras">
+                <figure>
+                    <img src="imagens/rafting3.jpg" alt="Perfil do Funcionário">
+                    <figcaption>Perfil do Funcionário</figcaption>
+                </figure>   
+                <figure>
+                    <img src="imagens/rafting4.jpg" alt="Perfil do Funcionário">
+                    <figcaption>Perfil do Funcionário</figcaption>
+                </figure>   
+                <figure>
+                    <img src="imagens/rafting5.jpg" alt="Perfil do Funcionário">
+                    <figcaption>Perfil do Funcionário</figcaption>                                                 
+                </figure>
+            </div>
+        </section> 
+    </main>
+    <footer>
+        <p>&copy; 2026 Amazonia Rafting | Anderson Neves</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com"><img src="imagens/facebook.png" alt="ícone do facebook"></a>
+            <a href="https://linkedin.com"><img src="imagens/linkedin.png" alt="ícone do linkedin"></a>
+            <a href="https://instagram.com"><img src="imagens/instagram.png" alt="ícone do instagram"></a>
+        </nav>  
+    </footer>
+</body>
+</html>
