@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passeios - Amazonia Rafting</title>
+    <meta name="description" content="Esta é a página principal de apresentação da empresa Amazonia Rafting">
+    <meta name="author" content="Anderson de Souza das Neves">
+    <link rel="stylesheet" href="estilos/rafting.css">
+</head>
+<body>
+    <main>
+        <header>
+           <img src="imagens/logo.png" alt="logotipo da empresa">
+               <nav>
+                  <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="passeios.html">Passeios</a></li>
+                    <li><a href="contato.html">Fale Conosco</a></li>
+                  </ul>
+                </nav>
+        </header>
+        <div class="content">
+            <!-- CARROSSEL / SLIDER DE FOTOS DOS PASSEIOS -->
+            <div class="slider-section">
+                <div class="slider-title">Galeria de Passeios Realizados</div>
+                
+                <div class="slider-container">
+                    <!-- Controles Radio sem JS -->
+                    <input type="radio" name="slide-control" id="slide1" checked>
+                    <input type="radio" name="slide-control" id="slide2">
+                    <input type="radio" name="slide-control" id="slide3">
+
+                    <!-- Slides de Fotos e Legendas -->
+                    <div class="slides-wrapper">
+                        <div class="slide slide-1" style="background-image: url('https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=1000&q=80');">
+                            <div class="slide-overlay">
+                                <h3>Corredeira da Garganta do Diabo</h3>
+                                <p>Ação pura no Rafting Adrenalina Total - Expedição realizada no Rio Paraíba.</p>
+                            </div>
+                        </div>
+                        <div class="slide slide-2" style="background-image: url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1000&q=80');">
+                            <div class="slide-overlay">
+                                <h3>Acampamento Wild Camp à Beira-Rio</h3>
+                                <p>Noite sob as estrelas com fogueira e gastronomia de acampamento inclusa.</p>
+                            </div>
+                        </div>
+                        <div class="slide slide-3" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80');">
+                            <div class="slide-overlay">
+                                <h3>Rafting Contemplativo em Família</h3>
+                                <p>Momentos inesquecíveis em águas calmas para todas as idades.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Indicadores de Pontos (Bullets) -->
+                    <div class="slider-nav">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                    </div>
+
+                    <!-- Setas de Navegação -->
+                    <div class="arrow-nav">
+                        <div class="nav-1">
+                            <label for="slide3" class="prev">&#10094;</label>
+                            <label for="slide2" class="next">&#10095;</label>
+                        </div>
+                        <div class="nav-2">
+                            <label for="slide1" class="prev">&#10094;</label>
+                            <label for="slide3" class="next">&#10095;</label>
+                        </div>
+                        <div class="nav-3">
+                            <label for="slide2" class="prev">&#10094;</label>
+                            <label for="slide1" class="next">&#10095;</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         <section class="historia">
+            <div class="historia-paragrafo">
+                
+                <div class="historia-img">
+                    <img src="imagens/historia.jpg" alt="Rafting Historia da Empresa">
+                </div>
+                <article>
+                    <h3>Mais do que Apenas a Emoção</h3>
+                    <p>Prepare-se para transformar o seu final de semana em uma jornada inesquecível de adrenalina e conexão com a natureza não é apenas a nossa missão — é a nossa paixão. Reúna seus amigos, venha encarar as corredeiras mais impressionantes da região com a máxima segurança que só Amazonia Rafting tem. Agende sua expedição hoje mesmo e viva a experiência de lavar a alma de verdade!</p>
+                </article>
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Amazonia Rafting | Anderson Neves</p>
+        <nav class="redes-sociais">
+            <a href="https://facebook.com"><img src="imagens/facebook.png" alt="ícone do facebook"></a>
+            <a href="https://linkedin.com"><img src="imagens/linkedin.png" alt="ícone do linkedin"></a>
+            <a href="https://instagram.com"><img src="imagens/instagram.png" alt="ícone do instagram"></a>
+        </nav>  
+    </footer>
+</body>
+</html>

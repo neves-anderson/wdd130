@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passeios & Aventuras - Rafting e Acampamentos</title>
+    <style>
+        /* CSS Reset & General Setup */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f0;
+            color: #2c3531;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Header / Brand Banner */
+        .header {
+            background-color: #1b3b2b;
+            color: #ffffff;
+            padding: 25px 30px;
+            display: table;
+            width: 100%;
+            border-bottom: 5px solid #d97736;
+        }
+
+        .header-brand {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .header-brand h1 {
+            font-size: 22pt;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .header-brand p {
+            font-size: 10pt;
+            color: #a3b899;
+        }
+
+        .header-contact {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: right;
+            font-size: 9pt;
+            color: #e2e8f0;
+        }
+
+        .header-contact strong {
+            color: #d97736;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        /* =================================================== */
+        /* SLIDER / CARROSSEL DE FOTOS EM CSS PURO */
+        /* =================================================== */
+        .slider-section {
+            margin-bottom: 30px;
+        }
+
+        .slider-title {
+            font-size: 13pt;
+            font-weight: 700;
+            color: #1b3b2b;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            border-left: 4px solid #d97736;
+            padding-left: 10px;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 380px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .slides-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Oculta os botões radio de controle */
+        input[name="slide-control"] {
+            display: none;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(15, 23, 42, 0.9));
+            color: #ffffff;
+            padding: 25px 25px 40px 25px;
+        }
+
+        .slide-overlay h3 {
+            font-size: 14pt;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #ffffff;
+        }
+
+        .slide-overlay p {
+            font-size: 9.5pt;
+            color: #cbd5e1;
+        }
+
+        /* Alternância dos slides de acordo com o radio marcado */
+        #slide1:checked ~ .slides-wrapper .slide-1,
+        #slide2:checked ~ .slides-wrapper .slide-2,
+        #slide3:checked ~ .slides-wrapper .slide-3 {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        /* Pontos de Navegação (Bullets) */
+        .slider-nav {
+            position: absolute;
+            bottom: 12px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .slider-nav label {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            margin: 0 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #slide1:checked ~ .slider-nav label[for="slide1"],
+        #slide2:checked ~ .slider-nav label[for="slide2"],
+        #slide3:checked ~ .slider-nav label[for="slide3"] {
+            background-color: #d97736;
+            width: 26px;
+            border-radius: 6px;
+        }
+
+        /* Setas de Navegação (Anterior / Próximo) */
+        .arrow-nav label {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            background: rgba(27, 59, 43, 0.7);
+            color: white;
+            padding: 10px 14px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14pt;
+            display: none;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        .arrow-nav label:hover {
+            background: #d97736;
+        }
+
+        .arrow-nav .prev { left: 12px; }
+        .arrow-nav .next { right: 12px; }
+
+        #slide1:checked ~ .arrow-nav .nav-1,
+        #slide2:checked ~ .arrow-nav .nav-2,
+        #slide3:checked ~ .arrow-nav .nav-3 {
+            display: block;
+        }
+
+        /* Pitch Box */
+        .pitch-box {
+            background-color: #f8fafc;
+            border-left: 4px solid #d97736;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            font-size: 10pt;
+            color: #334155;
+        }
+
+        /* Section Titles */
+        .section-header {
+            border-left: 5px solid #1b3b2b;
+            padding-left: 12px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 15pt;
+            font-weight: 700;
+            color: #1b3b2b;
+            text-transform: uppercase;
+        }
+
+        .section-subtitle {
+            font-size: 9pt;
+            color: #64748b;
+        }
+
+        /* Tour Cards Layout */
+        .tour-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+
+        .tour-header {
+            background-color: #2d5a40;
+            color: #ffffff;
+            padding: 12px 20px;
+            display: table;
+            width: 100%;
+        }
+
+        .tour-header-camping {
+            background-color: #3b5249;
+        }
+
+        .tour-title {
+            display: table-cell;
+            font-size: 11pt;
+            font-weight: 700;
+        }
+
+        .tour-badge {
+            display: table-cell;
+            text-align: right;
+            font-size: 8pt;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .badge-tag {
+            background-color: #d97736;
+            color: #ffffff;
+            padding: 3px 10px;
+            border-radius: 12px;
+        }
+
+        .badge-expedition {
+            background-color: #b91c1c;
+        }
+
+        .tour-body {
+            padding: 20px;
+        }
+
+        .tour-description {
+            font-size: 9.5pt;
+            color: #475569;
+            margin-bottom: 15px;
+        }
+
+        /* Tour Details Table */
+        .tour-details {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 9pt;
+            background-color: #f8fafc;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .tour-details td {
+            padding: 8px 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .tour-details tr:last-child td {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            font-weight: 700;
+            color: #1b3b2b;
+            width: 20%;
+        }
+
+        .price-tag {
+            font-size: 12pt;
+            font-weight: 800;
+            color: #d97736;
+            text-align: right;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1b3b2b;
+            color: #a3b899;
+            text-align: center;
+            padding: 15px;
+            font-size: 8.5pt;
+            border-top: 3px solid #d97736;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Banner -->
+        <div class="header">
+            <div class="header-brand">
+                <h1>Rafting & Aventuras</h1>
+                <p>Expedições nas Corredeiras & Acampamentos na Natureza</p>
+            </div>
+            <div class="header-contact">
+                <strong>Reservas & Informações</strong><br>
+                WhatsApp: (11) 99999-8888<br>
+                contato@raftingaventuras.com.br
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- CARROSSEL / SLIDER DE FOTOS DOS PASSEIOS -->
+            <div class="slider-section">
+                <div class="slider-title">Galeria de Expedições Realizadas</div>
+                
+                <div class="slider-container">
+                    <!-- Controles Radio sem JS -->
+                    <input type="radio" name="slide-control" id="slide1" checked>
+                    <input type="radio" name="slide-control" id="slide2">
+                    <input type="radio" name="slide-control" id="slide3">
+
+                    <!-- Slides de Fotos e Legendas -->
+                    <div class="slides-wrapper">
+                        <div class="slide slide-1" style="background-image: url('https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=1000&q=80');">
+                            <div class="slide-overlay">
+                                <h3>Corredeira da Garganta do Diabo</h3>
+                                <p>Ação pura no Rafting Adrenalina Total - Expedição realizada no Rio Paraíba.</p>
+                            </div>
+                        </div>
+                        <div class="slide slide-2" style="background-image: url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1000&q=80');">
+                            <div class="slide-overlay">
+                                <h3>Acampamento Wild Camp à Beira-Rio</h3>
+                                <p>Noite sob as estrelas com fogueira e gastronomia de acampamento inclusa.</p>
+                            </div>
+                        </div>
+                        <div class="slide slide-3" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80');">
+                            <div class="slide-overlay">
+                                <h3>Rafting Contemplativo em Família</h3>
+                                <p>Momentos inesquecíveis em águas calmas para todas as idades.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Indicadores de Pontos (Bullets) -->
+                    <div class="slider-nav">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                    </div>
+
+                    <!-- Setas de Navegação -->
+                    <div class="arrow-nav">
+                        <div class="nav-1">
+                            <label for="slide3" class="prev">&#10094;</label>
+                            <label for="slide2" class="next">&#10095;</label>
+                        </div>
+                        <div class="nav-2">
+                            <label for="slide1" class="prev">&#10094;</label>
+                            <label for="slide3" class="next">&#10095;</label>
+                        </div>
+                        <div class="nav-3">
+                            <label for="slide2" class="prev">&#10094;</label>
+                            <label for="slide1" class="next">&#10095;</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pitch Box -->
+            <div class="pitch-box">
+                <strong>Conecte-se com a força da natureza!</strong> Expedições guiadas com máxima segurança, equipamentos de última geração e condutores certificados.
+            </div>
+
+            <!-- SECTION 1: RAFTING -->
+            <div class="section-header">
+                <h2 class="section-title">Passeios de Rafting</h2>
+                <div class="section-subtitle">Adrenalina e emoção no leito dos rios mais exuberantes</div>
+            </div>
+
+            <div class="tour-card">
+                <div class="tour-header">
+                    <span class="tour-title">1. Rafting Adrenalina Total (Nível III & IV)</span>
+                    <span class="tour-badge"><span class="badge-tag badge-expedition">Mais Popular</span></span>
+                </div>
+                <div class="tour-body">
+                    <p class="tour-description">
+                        Emoção e corredeiras desafiadoras. Inclui instrução técnica, equipamentos de alta performance e registro fotográfico digital.
+                    </p>
+                    <table class="tour-details">
+                        <tr>
+                            <td class="detail-label">Duração:</td>
+                            <td>3 horas (7 km)</td>
+                            <td class="detail-label">Inclui:</td>
+                            <td>Guia, Equipamento, Fotos</td>
+                        </tr>
+                        <tr>
+                            <td class="detail-label">Dificuldade:</td>
+                            <td>Moderada / Avançada</td>
+                            <td class="detail-label">Investimento:</td>
+                            <td class="price-tag">R$ 180,00</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <div class="tour-header">
+                    <span class="tour-title">2. Rafting Família & Ecoturismo (Nível I & II)</span>
+                    <span class="tour-badge"><span class="badge-tag">Iniciantes</span></span>
+                </div>
+                <div class="tour-body">
+                    <p class="tour-description">
+                        Trajeto calmo e contemplativo. Parada para banho de rio e degustação de frutas locais.
+                    </p>
+                    <table class="tour-details">
+                        <tr>
+                            <td class="detail-label">Duração:</td>
+                            <td>2 horas (4 km)</td>
+                            <td class="detail-label">Inclui:</td>
+                            <td>Guia, Equipamento, Lanche</td>
+                        </tr>
+                        <tr>
+                            <td class="detail-label">Dificuldade:</td>
+                            <td>Fácil (Livre)</td>
+                            <td class="detail-label">Investimento:</td>
+                            <td class="price-tag">R$ 120,00</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- SECTION 2: CAMPING -->
+            <div class="section-header">
+                <h2 class="section-title">Acampamentos & Imersão</h2>
+                <div class="section-subtitle">Pernoite na mata com conforto e gastronomia de acampamento</div>
+            </div>
+
+            <div class="tour-card">
+                <div class="tour-header tour-header-camping">
+                    <span class="tour-title">3. Expedição Wild Camp & Rafting (2 Dias / 1 Noite)</span>
+                    <span class="tour-badge"><span class="badge-tag">Experiência Completa</span></span>
+                </div>
+                <div class="tour-body">
+                    <p class="tour-description">
+                        2 descidas de rafting no rio, trilha guiada e pernoite em acampamento estruturado na margem do rio com fogueira, jantar especial e café da manhã rústico.
+                    </p>
+                    <table class="tour-details">
+                        <tr>
+                            <td class="detail-label">Duração:</td>
+                            <td>Sáb 08h ao Dom 14h</td>
+                            <td class="detail-label">Alimentação:</td>
+                            <td>Almoço, Jantar e Café</td>
+                        </tr>
+                        <tr>
+                            <td class="detail-label">Estrutura:</td>
+                            <td>Barraca Montada</td>
+                            <td class="detail-label">Investimento:</td>
+                            <td class="price-tag">R$ 450,00</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Rafting Excursões e Aventuras Ltda. • CNPJ: 00.000.000/0001-00 • Base Operacional: Vale das Corredeiras, Km 12
+        </div>
+    </div>
+
+</body>
+</html>
