@@ -9,52 +9,72 @@
     <link rel="stylesheet" href="estilos/rafting.css">
 </head>
 <body>
-    <main class="main-box">
-        <header id="header-index">
-           <img src="imagens/logo.png" alt="logotipo da empresa">
-               <nav>
-                  <ul>
-                    <li><a href="index.html">Página Inicial</a></li>
-                    <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="passeios.html">Passeios</a></li>
-                    <li><a href="contato.html">Fale Conosco</a></li>
-                  </ul>
+    <main id="principal">
+            <header>
+                <img src="imagens/logo.png" alt="logotipo da empresa">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Página Inicial</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="passeios.html">Passeios</a></li>
+                        <li><a href="contato.html">Fale Conosco</a></li>
+                    </ul>
                 </nav>
-        </header>
-        <div class="hero-index">
-            <img src="imagens/hero2.jpg" alt="rafting radical">
-            <h1>Venha viver essa aventura!</h1>
-        </div>    
-         <section class="passeios">
-           <div class="passeios-figuras">
-                <figure>
-                    <img class="serviços" src="imagens/rafting1.jpg" alt="Rios a Explorar">
-                    <img class="icones" src="imagens/icone-rios.png" alt="Perfil do Guia de Rafting">
-                    <figcaption>Rios</figcaption>
-                </figure>   
-                <figure>
-                    <img class="serviços" src="imagens/camp.jpg" alt="Lugares para acampar">
-                    <img class="icones" src="imagens/icone-fogueira.png" alt="Perfil do Guia de Rafting">
-                    <figcaption>Acampamento</figcaption>
-                </figure>   
-                <figure>
-                    <img class="serviços" src="imagens/corredeiras.jpg" alt="Corredeiras para Rafting">
-                    <img class="icones" src="imagens/icone-remos.png" alt="Perfil do Guia de Rafting">
-                    <figcaption>Corredeiras</figcaption>                                                 
-                </figure>
+            </header>
+            <div class="hero-index">
+                <img src="imagens/hero2.jpg" alt="rafting radical">
+                <h1>Venha viver essa aventura!</h1>
+                <div class="reserva">
+                  <p>Venha e Divarta-se!</p>
+                  <a href="passeios.html" class="meu-botao">Reserve Agora</a>
+                </div>               
+            </div>    
+            <div class="catalogo">
+                    <figure>
+                        <img class="serviços" src="imagens/rafting1.jpg" alt="Rios a Explorar">
+                        <img class="icones" src="imagens/icone-rios.png" alt="Perfil do Guia de Rafting">
+                        <figcaption>Rios</figcaption>
+                    </figure>   
+                    <figure>
+                        <img class="serviços" src="imagens/camp.jpg" alt="Lugares para acampar">
+                        <img class="icones" src="imagens/icone-fogueira.png" alt="Perfil do Guia de Rafting">
+                        <figcaption>Acampamento</figcaption>
+                    </figure>   
+                    <figure>
+                        <img class="serviços" src="imagens/corredeiras.jpg" alt="Corredeiras para Rafting">
+                        <img class="icones" src="imagens/icone-remos.png" alt="Perfil do Guia de Rafting">
+                        <figcaption>Corredeiras</figcaption>                                                 
+                    </figure>
             </div>
-        </section>  
-        <section class="section-box">
-            <div class="div-box">
-                <img src="imagens/historia.jpg" alt="Rafting Historia da Empresa">
-                <article>
-                    <h3>Mais do que Apenas a Emoção</h3>
-                    <p>Prepare-se para transformar o seu final de semana em uma jornada inesquecível de adrenalina e conexão com a natureza não é apenas a nossa missão — é a nossa paixão!</p>
-                    <button type="submit">Junte-se a Nós</button>
-                </article>
-            </div>            
-        </section>
+
+            <!-- Seção Sobre / Banner Inferior -->
+            <div class="painel">
+                    <img src="imagens/historia.jpg" alt="Rafting Historia da Empresa">
+                    <article>
+                        <h2>Mais do que Apenas a Emoção</h2>
+                        <p>Prepare-se para transformar o seu final de semana em uma jornada inesquecível de aventura e conexão com a natureza!</p>
+                        <button type="button">Junte-se a Nós</button>
+                    </article>
+            </div>  
+            <div class="promocoes">
+                <h2>Conhecça nossas promoções</h2>
+                <p>Receba nossas novidades diretamente na sua caixa de entrada.</p>
+                
+                <form action="#" method="POST" class="promocoes-form">
+                    <div class="input-group">
+                    <input type="text" name="nome" id="nome" placeholder="Seu Nome" required>
+                    </div>
+                    
+                    <div class="input-group">
+                    <input type="email" name="email" id="email" placeholder="Seu E-mail" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-inscrever">Inscrever-se</button>
+                </form>
+            </div>          
     </main>
+
+    <!-- Rodapé -->
     <footer class="rodape">
         <p>&copy; 2026 Amazonia Rafting | Anderson Neves</p>
         <nav class="redes-sociais">

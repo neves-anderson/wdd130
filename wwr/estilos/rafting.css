@@ -1,3 +1,6 @@
+
+/* ----------- Página Padrão -----------------*/
+
 :root {
     --cor-primaria: #fff; 
     --cor-secundaria: rgb(115, 156, 190); 
@@ -6,184 +9,6 @@
     --fonte-titulo: "Times Nem Roman", "Georgia", serif;
     --fonte-body: Arial, Helvetica, sans-serif;
 }
-
-/* Página Inicial*/
-
-#header-index {
-  display: grid;
-  grid-template-columns: 200px 2fr;
-  background-color: var(--cor-secundaria);
-  padding: 10px 20px;
-  align-items: center; 
-}
-
-#header-index img {
-  width: 50px;
-  height: auto;
-  border-radius: 10px;
-}
-
-#header-index nav {
-  display: flex;
-}
-
-#header-index nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    max-width: 840px;
-    margin: 0 auto;
-    padding: 10px 40px;
-}
-
-#header-index nav a {
-    display: block;
-    text-align: center;
-    padding: .2rem;
-    text-decoration: none;
-    font-weight: 700;
-    color: var(--cor-destaque1); 
-}
-
-.main-box {
-  border: 1px solid var(--cor-destaque1);
-}
-
-.hero-index {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;    
-  justify-content: center; 
-  width: 100%;
-  max-width: 900px; 
-  margin: 0 auto;
-  overflow: hidden;
-  box-sizing: border-box;
-  border: 1px solid var(--cor-secundaria);
-}
-
-.hero-index img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.hero-index h1 {
-    position: absolute;
-    top: 20px;
-    padding: 15px;
-    width: 100%;
-    text-align: center;
-    font-size: 50px;
-    color: var(--cor-primaria); 
-    font-family: Brush Script MT;
-} 
-
-.passeios {
-  margin-top: 30px;
-  padding: 10px 5px;
-}
-
-.passeios-figuras {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  justify-items: center;
-  text-align: center;
-}
-
-.passeios-figuras figure {
-  justify-content: center;
-}
-
-.passeios h2 {
-  font-size: 24px;
-  margin-top: 5px;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.icones {
-  justify-self: center;
-  display: block;
-  width: 30px;
-  height: auto;
-}
-
-.serviços {
-  width: 120px;
-  height: 100px;
-  border-radius: 5px;
-}
-
-.passeios-figuras figcaption {
-    font-size: 14px;
-}
-
-.div-box {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  position: relative;
-  max-width: 100%;
-  
-}
-
-.div-box img {
-  grid-column: 1/4;
-  position: absolute;
-  width: 500px;
-  padding: 40px;
-}
-
-.div-box article {
-  grid-column: 3/6;
-  position: absolute;
-  
-  font-size: 14px;
-  top: 120px;
-  width: 450px;
-  height: auto;
-  padding: 20px;
-  text-align: left;
-  background-color: var(--cor-secundaria);
-  opacity: 0.7;
-  color: var(--cor-destaque1); 
-  font-family: var(--fonte-body);
-}
-
-.rodape {
-  position: relative;
-  margin-top: 330px;
-  background-color: var(--cor-secundaria);
-  border: 1px solid var(--cor-secundaria);
-  padding: 10px 30px;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-}
-
-.rodape p {
-  font-size: 15px;
-  font-weight: bold;
-  margin-right: 50px;
-  color: var(--cor-destaque1); 
-}
-
-.rodape nav {
-  display: flex;
-  gap: 10px;
-}
-
-.rodape img {
-  width: 30px;
-  height: auto;
-  font-weight: bold; 
-}
-
-
-/* Página Sobre Nós*/
 
 * {
   box-sizing: border-box;
@@ -270,8 +95,250 @@ footer img {
   font-weight: bold; 
 }
 
-/* Seletores de Classe */
 
+/* ---------------- Página Inicial -----------------*/
+
+#principal {
+  border: 1px solid #000;
+}
+
+.hero-index {
+  position: relative;
+  display: flex;
+  top: 20px;
+  flex-direction: column;
+  align-items: center;    
+  justify-content: center; 
+  width: 100%;
+  max-width: 900px; 
+  box-sizing: border-box;
+}
+
+.hero-index img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-index h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    color: burlywood; 
+    font-family: Brush Script MT;
+} 
+
+.reserva {
+  position: absolute;
+  padding: 10px;
+}
+
+
+.reserva p {
+  font-size: 30px;
+  color: var(--cor-primaria); 
+  font-family: Brush Script MT;
+  margin-top: -150px;
+  align-items: center;
+}
+
+.meu-botao {
+  position: absolute;
+  padding: 10px;
+  font-size: 12px;
+  background-color:burlywood;
+  color:var(--cor-destaque1);           
+  text-decoration: none;    
+  font-weight: bold;
+  margin-left: 50px;
+  
+}
+
+
+.catalogo {
+  margin-top: 60px;
+  padding: 10px 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.catalogo figure {
+  justify-content: center;
+}
+
+.catalogo h2 {
+  font-size: 24px;
+  margin-top: 5px;
+  text-align: center;
+  margin-bottom: 15px;   
+}
+
+.serviços {
+  width: 120px;
+  height: 100px;
+  border-radius: 5px;
+  border: 5px solid var(--cor-destaque2);
+}
+
+.icones {
+  justify-self: center;
+  display: block;
+  width: 20px;
+  height: auto;
+}
+
+.passeios figcaption {
+    font-size: 14px;
+}
+
+.painel {
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 100%;
+  position: relative;
+  background-color: var(--cor-destaque2);
+}
+
+.painel img {
+  position: relative;
+  margin-left: 20px;
+  grid-column: 1/4;
+  width: 500px;
+  padding: 40px;
+}
+
+.painel article {
+  position: absolute;
+  grid-column: 3/6;  
+  margin-top: 100px;
+  font-size: 13px;
+  width: 400px;
+  height: auto;
+  padding: 10px;
+  text-align: left;
+  background-color:rgb(78, 83, 84);
+  opacity: 0.8;
+  color: var(--cor-primaria); 
+  font-family: var(--fonte-body);
+  text-align: center;
+}
+
+.painel article h2 {
+  padding: 2px;
+  margin-bottom: 2px;
+}
+
+.painel article p {
+  line-height: 1.5em;
+}
+
+.painel button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 12px;
+  background-color: #e3b07d;
+  color: var(--cor-destaque1);
+  font-weight: bold;
+  border: 1px solid #a87948;
+}
+
+.rodape {
+  position: relative;
+  background-color: var(--cor-secundaria);
+  border: 1px solid var(--cor-destaque1);
+  padding: 10px 30px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.rodape p {
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 50px;
+  color: var(--cor-destaque1); 
+}
+
+.rodape nav {
+  display: flex;
+  gap: 10px;
+}
+
+.rodape img {
+  width: 30px;
+  height: auto;
+  font-weight: bold; 
+}
+
+.promocoes {
+  margin: 20px;
+  margin-top: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.promocoes h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.promocoes p {
+  color: #666;
+  padding: 2px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+/* Campos de entrada (Nome e E-mail) */
+.input-group {
+  margin-bottom: 10px;
+}
+
+.promocoes-form input {
+  width: 400px;
+  height: 10px;
+  padding: 12px;
+  border-radius: 4px;
+  box-sizing: border-box; 
+  font-size: 16px;
+}
+
+.promocoes-form input:focus {
+  outline: none;
+  border-color: #007bff; /* Cor da borda ao clicar */
+}
+
+/* Botão de inscrição */
+.btn-inscrever {
+  width: 100px;
+  padding: 10px;
+  background-color: burlywood;
+  color: var(--cor-destaque1);
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.btn-inscrever:hover {
+  background-color: #0056b3;
+}
+
+/* Página Sobre Nós*/
+  
 .hero {
   position: relative;
   display: flex;
@@ -398,10 +465,10 @@ footer img {
 }
 
 
-/* Página Passeios */
+/* -------------------- Página Passeios ---------------------- */
 
 
-        /* =================================================== */
+       /* =================================================== */
         /* SLIDER / CARROSSEL DE FOTOS EM CSS PURO */
         /* =================================================== */
         .slider-section {
@@ -409,13 +476,13 @@ footer img {
         }
 
         .slider-title {
+            margin-top: 20px;
             font-size: 13pt;
             font-weight: 700;
             color: #1b3b2b;
             text-transform: uppercase;
-            margin-top: 20px;
             margin-bottom: 12px;
-            border-left: 4px solid #d97736;
+            border-left: 4px solid var(--cor-secundaria);
             padding-left: 10px;
         }
 
@@ -505,7 +572,7 @@ footer img {
         #slide1:checked ~ .slider-nav label[for="slide1"],
         #slide2:checked ~ .slider-nav label[for="slide2"],
         #slide3:checked ~ .slider-nav label[for="slide3"] {
-            background-color: #d97736;
+            background-color: var(--cor-secundaria);
             width: 26px;
             border-radius: 6px;
         }
@@ -529,7 +596,7 @@ footer img {
         }
 
         .arrow-nav label:hover {
-            background: #d97736;
+            background: var(--cor-secundaria);
         }
 
         .arrow-nav .prev { left: 12px; }
@@ -540,6 +607,42 @@ footer img {
         #slide3:checked ~ .arrow-nav .nav-3 {
             display: block;
         }
+
+.passeios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 8px;
+  justify-content: space-around;
+}
+
+.passeios img {
+  width: 360px;
+  height: 250px;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+.passeios h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-left: 12px;
+}
+
+.passeios p{
+    font-size: 14px;
+    margin-left: 12px;
+    
+}
+
+.informacoes {
+    font-size: 14px;
+    margin-left: 40px;
+    margin-top: 10px;
+    line-height: 1.5em;
+}
 
 /* Página Fale Conosco */
 
@@ -727,3 +830,4 @@ footer img {
 .portfolio1-figuras figcaption {
     font-size: 14px;
 }
+
