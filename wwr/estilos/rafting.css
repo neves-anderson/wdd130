@@ -371,7 +371,7 @@ footer img {
     font-family: var(--fonte-titulo);
 } 
 
-.hero article {
+.hero div {
     position: absolute;
     font-size: 14px;
     top: 150px;
@@ -385,7 +385,7 @@ footer img {
     font-family: var(--fonte-body);
 }
 
-.hero article img {
+.hero div img {
     float: right;
     width: 125px;
     margin-right: 5px;
